@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/view.css">
+	<title>home</title>
+</head>
+<body>
+	<div id="heading">
+		<div id="heading1">
+			<img src="images/logo.jpg" id="logo">
+		</div>
+		<div id="heading3">
+			Hotel Gallery
+		</div>
+	</div>
+
+	<div id="gallery">
+		<h1>Rooms Bed Photo</h1>
+		<img src="images/over/01.jpg" width="150px" height="100px"/>
+		<img src="images/over/02.jpg" width="150px" height="100px"/>
+		<img src="images/over/03.jpg" width="150px" height="100px"/>
+		<img src="images/over/12.jpg" width="150px" height="100px"/><br>
+		<img src="images/over/04.jpg" width="150px" height="100px"/>
+		<img src="images/over/05.jpg" width="150px" height="100px"/>
+		<img src="images/over/06.jpg" width="150px" height="100px"/>
+		<img src="images/over/07.jpg" width="150px" height="100px"/><br>
+		<img src="images/over/08.jpg" width="150px" height="100px"/>
+		<img src="images/over/09.jpg" width="150px" height="100px"/>
+		<img src="images/over/10.jpg" width="150px" height="100px"/>
+		<img src="images/over/11.jpg" width="150px" height="100px"/>
+	</div>
+	<div id="contact">
+	<h1>Booking</h1>
+	<div id="a1">
+    <p>&nbsp;</p>
+    
+    <form action="./payment.html" method="post">
+		 <label for="name">Name:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    			<input id="name" name="name" placeholder="Full Name" tabindex="1" type="text"  required ><br><br>
+		
+		<label for="email">Email</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    			<input  id="email" name="email" placeholder="Email" type="email" required ><br><br>
+		
+		<label for="mobile">Mobile No:</label> &nbsp;
+            		<input  id="phone" name="mobile" placeholder="Number"  type="text" required> <br><br>
+		
+		<div style="position:relative;height:80px;">
+		<label for="out">Address:</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            		<input id="calendar4" name="out" required="" type="text"> <br><br>
+		<label for="in">Check in:</label> &nbsp;&nbsp;&nbsp;&nbsp;
+            		<input id="calendar3" name="in" required="" type="date"> <br><br>
+		</div>
+		Room Type:
+			<select name="room">
+				<option value="A/C">A/C</option>
+				<option value="Non-A/C">Non-A/C</option>
+                <option value="Non-A/C">Normal</option>
+			</select>
+			<select  name="type">
+				<option value="single">Single</option>
+				<option value="double">Double</option>
+				<option value="three">Three</option>
+			</select>
+		<br/><br/><br/>
+        <input type="submit" name="submit" value="Pay" />
+        <input type="reset" name="reset" value="Reset" />
+
+</form>
+		<br><br>
+		<a href="https://www.facebook.com/"><img src="images/over/fb.jpg" width="50px" height="50px"/></a>
+		<a href="https://accounts.google.com/ServiceLogin?passive=1209600&continue=https%3A%2F%2Faccounts.google.com%2FManageAccount&followup=https%3A%2F%2Faccounts.google.com%2FManageAccount#identifier"><img src="images/over/google.jpg" width="50px" height="50px"/></a>
+		<a href="https://twitter.com/login"><img src="images/over/tw.jpg" width="50px" height="50px"/></a>
+		<a href="https://in.yahoo.com/"><img src="images/over/yoo.png" width="50px" height="50px"/></a>
+        </div>
+        </div>
+        </body>
+</html>

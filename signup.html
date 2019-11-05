@@ -10,25 +10,99 @@
     <a href="home.html"><img src="images/home-icon.png"></a>
   </div>
 	<div id="container">
-		<marquee>Sign Up/Login Page</marquee>
+		<center>Sign Up Page</center>
 	</div>
 	<div id="form">
-		<div><img src="images/logo.jpg" id="icon"></div>
-		<form action="./view.html" method="post" >
-			<h4>First Name: </h4>
-			<input type="text" name="fname" placeholder="Enter The First Name" class="textbox" required><br>
-			<h4>Last Name: </h4>
-			<input type="text" name="lname" placeholder="Enter The Last Name " class="textbox" required><br>
+		
+		<form action="./view.html" name="validate" onsubmit="return(ani())" method="get" >
+			<h4>Full Name: </h4>
+			<input type="text" class="textbox" id="first" name="fname" placeholder="Enter The First Name"><br>
+			<h4>User Name: </h4>
+			<input class="textbox"  type="text" id="last" name="lname" placeholder="Enter The Last Name "><br>
 			<h4>E-mail: </h4>
-			<input type="email" name="email" placeholder="xyz@gmail.com" class="textbox" required><br>
+			<input type="email" class="textbox"  name="emaill" placeholder="xyz@_mail.com"  id="email"><br>
+            <h4>Contact Number: </h4>
+			<input class="textbox"  type="text" name="telephone" placeholder="9017010420"  id="email"><br>
 			<h4>Password : </h4>
-			<input type="Password" name="Password" placeholder="Password" class="textbox" required><br>
-			<h4>Gender : </h4><br>
-			<input type="radio" name="Gender" required>Male<br>
-			<input type="radio" name="Gender" required>Female<br><br>
-			<input type="submit" name="SUBMIT"  id="submitbutton" value="Login">
+			<input type="Password" class="textbox" name="Password" placeholder="Password"  id="pwd"><br>
+            <h4>Confirm Password : </h4>
+			<input type="Password" class="textbox" name="CPassword" placeholder="Password"  id="pwdc"><br>
+            <h4>DOB: </h4>
+			<input type="date" name="dob" placeholder=""  class="textbox"  id="cpwd" ><br>
+			
+			<h4>Gender : </h4>
+			<input type="radio" id="genderM" name="Gender" checked>Male&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" id="genderF" name="Gender">Female<br>
+            <input type="radio"  name="Gender" >Others<br>
+            <h4>Address: </h4>
+			<input type="text"  name="address" placeholder="Address " class="textbox" ><br><br>
+			<input type="submit"  name="SUBMIT" id="submitbutton" value="Sign In"><br><br>
+            <h5>If you are already existing user then click here.</h5><br>
+           <a href="./login.html"><p id="submitbutton">Log In</p> </a>
+            
 		</form>
-	</div>	
+	</div>
+	
     </header>
+ <script type="text/javascript">
+        function ani(){
+            var pwd=document.getElementById("pwd").value;
+            var cpwd=document.getElementById("pwdc").value;
+             if( document.validate.fname.value == "" )
+   {
+     alert( "Please provide your Full Name!" );
+     document.validate.fname.focus();
+     return false;
+   }
+            if( document.validate.lname.value == "" )
+   {
+     alert( "Please provide your User Name!" );
+     document.validate.lname.focus() ;
+     return false;
+   }
+              if( document.validate.emaill.value == "" )
+   {
+     alert( "Please provide your email!" );
+     document.validate.emaill.focus() ;
+     return false;
+   }
+     
+     
+             if( (document.validate.telephone.value == "")  || document.validate.telephone.value.length!=10 || (isNaN( document.validate.telephone.value)  ))
+   {
+     alert( "Please provide your telephone number of 10 digits and in format 9017010420" );
+     document.validate.telephone.focus() ;
+     return false;
+   }
+             if( document.validate.Password.value == "" )
+   {
+     alert( "Please provide your PASSWORD!" );
+     document.validate.Password.focus() ;
+     return false;
+   }
+             if( document.validate.CPassword.value == "" )
+   {
+     alert( "Please confirm password");
+     document.validate.CPassword.focus() ;
+     return false;
+   }
+            if( document.validate.address.value == "" )
+   {
+     alert( "Please provide your ADDRESS!" );
+     document.validate.address.focus() ;
+     return false;
+   }
+            if(!(pwd==cpwd)){
+                alert("password and confirm password didn't match. try again");
+                window.open("signup.html");
+            }
+            alert("signed in successfully!!!");
+            return true;
+        
+        }
+     
+         
+        
+    </script>
 </body>
 </html>

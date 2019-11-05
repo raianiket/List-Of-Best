@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/signup.css">
+	<title>Login</title>
+    <style>
+        #form{
+            margin-top: 10px;
+            
+        }
+     </style>
+   </head>
+<body>
+    <header>
+  <div class="profileLogo"> 
+    <a href="home.html"><img src="images/home-icon.png"></a>
+  </div>
+	<div id="container">
+		<center>Login Page</center>
+	</div>
+	<div id="form">
+		
+		<form action="./view.html" name="validate" onsubmit="return(ani());" method="post" >
+			<h4>User Name: </h4>
+			<input type="text" class="textbox" id="first" name="fname" placeholder="Enter User Name" ><br>
+			<h4>Password : </h4>
+			<input type="Password" class="textbox" name="pwd" placeholder="Password"  id="pwd" ><br>
+            <h4>DOB: </h4>
+			<input type="date" name="Password" required placeholder=""  class="textbox"  id="cpwd" ><br><br>
+			<input type="submit"  name="SUBMIT" id="submitbutton" value="Login"><br>
+            </form>
+           <div style="float: right;text-align: center;color: darkblue;"><a href="forgetpwd.html"><h5>Forget Password?</h5></a></div>
+	</div>
+        <script type="text/javascript">
+        function ani(){
+           
+             if( document.validate.fname.value == "" )
+   {
+     alert( "Please provide your User Name!" );
+     document.validate.fname.focus();
+     return false;
+   }
+         if( document.validate.pwd.value == "" )
+   {
+       alert( "Please provide your PASSWORD!" );
+     document.validate.pwd.focus() ;
+     return false;
+   }
+       alert("logged in successfully!!!");
+            return true;
+        
+        }
+     </script>
+	 </header>
+  
+</body>
+</html>

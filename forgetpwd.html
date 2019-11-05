@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/signup.css">
+	<title>Login</title>
+    <style>
+        #form{
+            margin-top: 20px;
+            margin-left: -30px;
+        }
+    
+    </style>
+</head>
+<body>
+    
+  <div class="profileLogo"> 
+    <a href="home.html"><img src="images/home-icon.png"></a>
+  </div>
+	<div id="container">
+		<center>Reset Password</center>
+	</div>
+	<div id="form">
+		
+		<form action="./login.html" name="validate" onsubmit="return(ani());" method="post" >
+			<h4>User Name: </h4>
+			<input type="text" class="textbox" id="first" name="fname" placeholder="Enter User Name" ><br>
+			<h4>Mobile Number: </h4>
+			<input type="tel" class="textbox" name="telephone" placeholder="mobile number"  id="pwd"><br>
+            <h4>DOB: </h4>
+			<input type="date" name="Password" placeholder=""  class="textbox"  id="cpwd" ><br><br>
+			
+			<input type="submit"  name="SUBMIT" id="submitbutton" value="Send Password"><br>
+            
+		</form>
+    </div>
+	
+   <script type="text/javascript">
+        function ani(){
+             if( document.validate.fname.value == "" )
+   {
+     alert( "Please provide your Name!" );
+     document.validate.fname.focus() ;
+     return false;
+   }
+              if( document.validate.telephone.value == "" )
+   {
+     alert( "Please provide your telephone number!" );
+     document.validate.telephone.focus() ;
+     return false;
+   }
+             if( document.validate.telephone.value.length!=10 || isNaN( document.validate.telephone.value))
+   {
+     alert( "Please provide your telephone number of 10 digits only & use numbers" );
+     document.validate.telephone.focus() ;
+     return false;
+   }
+            alert("password sent successfully on your registered mobile number!!!");
+            return true;
+        
+        }
+     
+         
+        
+    </script>
+</body>
+</html>
